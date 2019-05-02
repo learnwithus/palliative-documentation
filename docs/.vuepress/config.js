@@ -2,6 +2,10 @@ module.exports = {
     title: 'VCH Palliative',
     description: 'Everything you need to know',
     themeConfig: {
+        // nav: [
+        //     { text: 'Backend', link: '/backend/' },
+        //     { text: 'API', link: '/api/' },
+        // ],
         sidebar: {
             '/api/': [
                 '',     /* /foo/ */
@@ -17,7 +21,7 @@ module.exports = {
 
             // fallback
             '/': [
-                '',        /* / */
+                // '',        /* / */
                 'api', /* /contact.html */
                 'backend'    /* /about.html */
             ]
