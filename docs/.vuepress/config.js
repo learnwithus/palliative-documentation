@@ -7,21 +7,21 @@ module.exports = {
         //     { text: 'API', link: '/api/' },
         // ],
         sidebar: {
-            '/api/': [
-                '',     /* /foo/ */
-                'one',  /* /foo/one.html */
-                'two'   /* /foo/two.html */
-            ],
+            // '/api/': [
+            //     '',     /* /foo/ */
+            //     'one',  /* /foo/one.html */
+            //     'two'   /* /foo/two.html */
+            // ],
 
-            '/backend/': [
-                '',      /* /bar/ */
-                'three', /* /bar/three.html */
-                'four'   /* /bar/four.html */
-            ],
+            // '/backend/': [
+            //     '',      /* /bar/ */
+            //     'three', /* /bar/three.html */
+            //     'four'   /* /bar/four.html */
+            // ],
 
             // fallback
             '/': [
-                // '',        /* / */
+                '',        /* / */
                 'api', /* /contact.html */
                 'backend'    /* /about.html */
             ]
