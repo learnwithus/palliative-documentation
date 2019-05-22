@@ -2,7 +2,7 @@
 
 ## Intro
 
-PAPI provides a RESTful JSON API can that be accessed at [https://palliative.vchlearn.ca/_/](https://palliative.vchlearn.ca/_/)
+PAPI provides a RESTful JSON API can that be accessed at [https://api.palliative.vchlearn.ca/_/](https://api.palliative.vchlearn.ca/_/)
 
 The "/_/" tells PAPI to respond with the default project endpoint where the palliative information is stored.
 
@@ -38,6 +38,6 @@ Answers for question branches
     
 ## (GET)ing the Data
 
-Basic API call to Main Collection that returns all the data the app would need:
+For PAT, I have created a custom, read-only, api endpoint that provides all neccesary data to run the app.  This can be found here:
 
-[https://palliative.vchlearn.ca/_/items/main?fields=*.*.*,protocols.starting_branch.*.*.*.*.*.*,protocols.*&single=1](https://palliative.vchlearn.ca/_/items/main?fields=*.*.*,protocols.starting_branch.*.*.*.*.*.*,protocols.*&single=1)
+[https://palliative.vchlearn.ca/_/custom/main](https://palliative.vchlearn.ca/_/custom/main)

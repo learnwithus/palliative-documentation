@@ -3,8 +3,8 @@ module.exports = {
     description: 'Everything you need to know',
     themeConfig: {
         nav: [
-            { text: 'API', link: 'http://palliative.vchlearn.ca/' },
-            { text: 'PAPI Editor', link: 'https://vch-papi.netlify.com' },
+            { text: 'API', link: 'http://api.palliative.vchlearn.ca/' },
+            { text: 'PAPI Editor', link: 'https://palliative.vchlearn.ca/' },
             {
                 text: 'Repositories',
                 items: [
