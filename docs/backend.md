@@ -1,32 +1,63 @@
 # Backend
 
 ## Intro
-Notes on DIrectus
+Notes on Directus
+
+## Administration
+You can administer the DIrectus Instance directly by visiting [https://api.palliative.vchlearn.ca/admin](https://api.palliative.vchlearn.ca/admin)
+
+## Structure
 
 
 #### PAPI contains the following collections which are used to store all the information PAT needs:
 
-### THE BELOW INFO IS OUT OF DATE
+### ♔ `Info`
+A singleton collection that contains basic info about the data
+- __version:__ Version number of current data
 
-### ♔ `Main`
-A singleton collection that serves as the root of the JSON tree for PAT
-- __intro:__ ID of protocol that will serve as intro.
-- __protocols:__ Linked to all protocols that we want PAT to see
+### ♕ `Plans` 
+List of all plans that are reused by the protocols
+- __plan:__ Name of the plan
+- __details:__ Further details about the plan (such as time contraints)
 
-### ♕ `Protocols` 
-A collection of protocols that begin the branching scenarios.  Includes the Intro Scenario
-- __name:__ The name of the protocol
-- __starting_branch:__ Links to the first branch of the protocol
-- __main_id:__ links protocol to main collection (will be blank if it a protocol we don't want to show up or if it is the intro)
+### ♖ `Protocols`
+Contains Protocols
+- __name:__ The Protocol name
+- __assessment_questions:__ Assessment Questinos
+- __additional_questions:__ Additional Questions
+- __plans:__ Plans
 
-### ♖ `Branches`
+### ♗ `Protocol Plans`
+Links together to protocol table and the plans table
+- __protocol:__ protocol ID
+- __plans:__ plan ID
+
+### ♖ `Question Types`
+AList of the types of questions that can be displayed by PAT
+- __type:__ string
+
+### ♖ `Intro Questions`
+Questions asked before protocol is picked
+- __question:__ The Question text
+
+### ♖ `Assessment Letters`
+List of OPRSTUV letters used for assessment
+- __letter:__ Single letter of acronymn
+- __title:__ Full word that the letter stands for
+
+### ♖ `Assessment Questions`
+List of questions asked once a protocol is selected
+- __protocol:__ ID of protocol
+- __question_type:__ ID od question_type to indicate which kind of question it is
+- __question:__ Question text
+
+### ♖ `Assessment Answers`
+List of answers for the questions asked as part of OPQRSTUV
+- __quesiton:__ Question ID
+- __answer:__ Answer text
+
+### ♖ `Additional Questions`
 Are either questions or outcomes.
-- __text:__ The Question or Outcome text
-- __is_outcome:__ Whether or not the branch is an outcome
-- __asnwers:__ If it is not an outcome, it is a quesiton and has answers
-
-### ♗ `Answers`
-Answers for question branches
-- __text:__ The answer text
-- __branch_id:__ The ID of the question branch that this answer answers 
-- __next_branch:__ The ID of the next branch to be shown if this answer is chosen
+- __protocol:__ Id of protocol
+- __question_type:__ id of question_type to indicate question type
+- __question:__ Question text
