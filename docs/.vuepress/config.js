@@ -30,7 +30,7 @@ module.exports = {
             // fallback
             '/': [
                 '',
-                'pat'
+                'pat',
                 'api', 
                 'backend',    
                 'papi'
