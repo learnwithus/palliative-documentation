@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'VCH Palliative',
+    title: 'VCH Palliative Documenation',
     description: 'Everything you need to know',
     themeConfig: {
         nav: [
@@ -29,9 +29,11 @@ module.exports = {
 
             // fallback
             '/': [
-                '',        /* / */
-                'api', /* /contact.html */
-                'backend'    /* /about.html */
+                '',
+                'pat'
+                'api', 
+                'backend',    
+                'papi'
             ]
         }
     }
